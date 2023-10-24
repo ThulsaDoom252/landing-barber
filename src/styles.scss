@@ -213,6 +213,62 @@ $text-color: #153461;
   @extend %button;
 }
 
+//*************Services
+.services-title {
+  margin: 8.5rem auto;
+  color: $text-color;
+  text-align: center;
+}
+
+.services-title h1 {
+  font-size: 4.4rem;
+  font-weight: 700;
+}
+
+.services-block {
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.services-col {
+  margin: 3.06rem;
+  background: #FAFBFF;
+  padding: 3.123rem 2.56rem 4.5rem 2.56rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  text-align: center;
+  border-radius: 1.81rem;
+  box-shadow: 0px 5px 0px 0px #99BAED;
+}
+
+.services-img-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3.12rem;
+  width: 6.43rem;
+  height: 7.87rem;
+  border-radius: 0.81rem;
+  background: #E5ECFE;
+  box-shadow: 0px 1px 0px 0px #008FDD;
+}
+
+.services-col-title {
+  margin-top: 3.69rem;
+}
+
+.services-col-text {
+  margin-top: 3.75rem;
+  hyphens: auto;
+  font-size: 1.5625rem;
+  font-weight: 400;
+  opacity: 0.6;
+  color: $text-color;
+}
+
 
 /*///BREAKPOINTS*/
 @media screen and (max-width: 1449px) {
@@ -271,6 +327,16 @@ $text-color: #153461;
   .history-button {
     margin-top: 2rem;
     margin-bottom: 2rem;
+  }
+
+  .services-block {
+    width: 100%;
+    margin: 0;
+  }
+
+  .services-col {
+    margin: 0 0 5rem 0;
+    padding: 0 0 1rem 0;
   }
 }
 
