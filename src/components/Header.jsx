@@ -26,7 +26,7 @@ const Header = () => {
                 <div className='notification-icon'>
                     <img src={notificationIcon} alt="alert-icon"/>
                 </div>
-                <button className='appointment-button button'>Appointment</button>
+                <button className='appointment-button'>Appointment</button>
             </div>
             <HiViewList className='burger-menu-icon'/>
         </header>

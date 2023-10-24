@@ -1,18 +1,22 @@
-import './App.css';
+import "./styles.scss"
 import 'reset-css';
 import Header from './components/Header';
-import HairStyleSection from './components/HairStyleSection';
+import HairStyleSection from './components/Content/HairStyleSection';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import HistorySection from './components/Content/HistorySection';
+import {Container} from 'react-bootstrap';
 
 
 function App() {
     return (
-        <div className={'wrapper'}>
+        <Container fluid className='wrapper'>
             <Header/>
             <main>
                 <HairStyleSection/>
+                <HistorySection/>
             </main>
-        </div>
+        </Container>
+
     );
 }
 

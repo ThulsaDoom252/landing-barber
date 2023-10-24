@@ -18,14 +18,9 @@
     color: #FBB400;
 }
 
-
 .wrapper {
-    max-width: 1920px;
-    box-sizing: border-box;
     font-family: Catamaran;
-
 }
-
 
 /*///!**********************HEADER*/
 .header {
@@ -137,7 +132,9 @@
     height: 76px;
 }
 
-/*////////Main*/
+/**************************************************************MAIN CONTENT*/
+
+/*******************************HAIRSTYLE*/
 .hairstyle-section {
     margin-top: 10.31rem;
     position: relative;
@@ -164,6 +161,25 @@
     font-weight: 400;
     line-height: 150.6%; /* 37.65px */
     letter-spacing: 0.046rem;
+}
+
+/******************HISTORY */
+.history-section {
+    margin-top: 21.06rem;
+    position: relative;
+    left: 5.13rem;
+}
+
+.history-title {
+    font-weight: 700;
+    font-size: 4.68rem;
+    line-height: 150.6%; /* 105.42px */
+    letter-spacing: 2.1px;
+}
+
+.history-image {
+ position: relative;
+    bottom: 6rem;
 }
 
 

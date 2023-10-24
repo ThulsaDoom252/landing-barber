@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@600&display=swap');
+
+$title-main: #FBB400;
+$text-color: #153461;
+
+%section-text {
+  font-size: 1.563rem;
+  width: 90%;
+  font-weight: 400;
+  line-height: 150.6%; /* 37.65px */
+  letter-spacing: 0.05rem;
+  color: $text-color;
+  opacity: 0.65;
+  word-break: break-all;
+}
+
+%button {
+  color: white;
+  width: 188px;
+  height: 75px;
+  border-radius: 20px;
+  background: #99BAED;
+  cursor: pointer;
+  transition: background 0.3s ease; /* Добавляем плавную анимацию для изменения фона */
+
+  &:hover {
+    background: #497fff; /* Новый фон при наведении */
+  }
+}
+
+
+.colored-word {
+  color: $title-main;
+}
+
+.wrapper {
+  font-family: Catamaran;
+}
+
+/*///!**********************HEADER*/
+.header {
+  height: 100px;
+  width: 100%;
+  padding-left: 170px;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-nav-block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-block {
+  display: flex;
+  justify-content: start;
+  align-items: end;
+}
+
+.logo {
+  width: 74.22px;
+  height: 74.22px;
+}
+
+.logo-text {
+  position: relative;
+  right: 20px;
+  color: #99BAED;
+  font-size: 40px;
+}
+
+/*Navbar*/
+.navbar {
+  width: 448px;
+  margin-left: 110px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  font-size: 25px;
+  font-weight: 500;
+  align-items: end;
+}
+
+.nav-item {
+  height: 100%;
+  display: flex;
+  align-items: end;
+  transition: all 0.5s ease;
+}
+
+.nav-item:hover {
+  background: #99BAED;
+  color: white;
+  cursor: pointer;
+}
+
+.appointment-block {
+  position: relative;
+  top: 35px;
+  right: 230px;
+  justify-content: space-between;
+  width: 416px;
+  display: flex;
+  align-items: center;
+}
+
+.profile-icon {
+  border-radius: 20px;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.notification-icon {
+  width: 29.75px;
+  border-radius: 20px;
+  height: 27.988px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.profile-icon img, .notification-icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.notification-icon:hover, .profile-icon:hover {
+  background: rgba(183, 182, 182, 0.4);
+  width: 39px;
+  height: 39px;
+}
+
+.burger-menu-icon {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: cyan;
+  cursor: pointer;
+}
+
+.appointment-button {
+  width: 188px;
+  height: 76px;
+  @extend %button;
+}
+
+/**************************************************************MAIN CONTENT*/
+
+/*******************************HAIRSTYLE*/
+.hairstyle-section {
+  margin-top: 10.31rem;
+  position: relative;
+  left: 11.75rem;
+}
+
+.hairstyle-image {
+  width: 78%;
+  position: relative;
+  bottom: 100px;
+}
+
+.hairstyle-title {
+  font-size: 4.69rem;
+}
+
+.hairstyle-text {
+  text-align: left;
+  margin-top: 1.8rem;
+  @extend %section-text;
+}
+
+.hairstyle-button {
+  @extend %button;
+  margin-top: 6.06rem;
+}
+
+/******************HISTORY */
+.history-section {
+  margin-top: 21.06rem;
+  position: relative;
+  left: 5.13rem;
+}
+
+.history-title {
+  font-weight: 700;
+  font-size: 4.68rem;
+  line-height: 150.6%; /* 105.42px */
+  letter-spacing: 2.1px;
+}
+
+.history-text-1 {
+  margin-top: 5rem;
+  @extend %section-text;
+}
+
+.history-text-2 {
+  margin-top: 2.5rem;
+  @extend %section-text;
+}
+
+.history-image {
+  position: relative;
+  width: 100%;
+  bottom: 11rem;
+}
+
+.history-button {
+  margin-top: 6.75rem;
+  @extend %button;
+}
+
+
+/*///BREAKPOINTS*/
+@media screen and (max-width: 1449px) {
+  .header {
+    padding-left: 20px;
+  }
+
+  .appointment-block {
+    right: 40px;
+    max-width: 30%;
+  }
+
+  .navbar {
+    margin-left: 40px;
+  }
+}
+
+@media screen and (max-width: 1031px) {
+  .navbar {
+    width: 330px;
+  }
+
+  .appointment-button {
+    width: 150px;
+    height: 60px;
+  }
+
+}
+
+@media screen and (max-width: 987px) {
+  .hairstyle-section, .history-section, .history-image {
+    position: static;
+  }
+
+  .history-section {
+    margin-top: 6rem;
+  }
+
+  .hairstyle-image, {
+    width: 100%;
+  }
+
+  .hairstyle-block, .history-block {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hairstyle-text {
+    padding: 0.5rem;
+    text-align: center;
+  }
+
+  .history-button {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 842px) {
+  .navbar {
+    margin: 0;
+    width: 320px;
+  }
+
+  .appointment-block {
+    right: 20px;
+  }
+
+  .logo-text {
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 733px) {
+  .header {
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 0 0 0;
+  }
+
+  .logo-nav-block {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .burger-menu-icon {
+    display: block;
+    font-size: 2rem;
+  }
+
+  .appointment-block {
+    width: 188px;
+    margin-top: 20px;
+    position: static;
+  }
+
+  .notification-icon, .profile-icon {
+    display: none;
+  }
+}
+
