@@ -14,6 +14,10 @@
     background: #497fff;
 }
 
+.colored-word {
+    color: #FBB400;
+}
+
 
 .wrapper {
     max-width: 1920px;
@@ -133,21 +137,33 @@
     height: 76px;
 }
 
-
 /*////////Main*/
 .hairstyle-section {
-    width: 100%;
-    display: flex;
-    margin-top: 165px;
-    padding-left: 188px;
-}
-
-.hairstyle-block {
-    width: 30%;
+    margin-top: 10.31rem;
+    position: relative;
+    left: 11.75rem;
 }
 
 .hairstyle-image {
-    width: 60%;
+    width: 78%;
+    position: relative;
+    bottom: 100px;
+}
+
+.hairstyle-title {
+    font-size: 4.69rem;
+}
+
+.hairstyle-text {
+    color: #153461;
+    text-align: left;
+    margin-top: 1.8rem;
+    margin-bottom: 6.06rem;
+    font-size: 1.56rem;
+    opacity: 0.65;
+    font-weight: 400;
+    line-height: 150.6%; /* 37.65px */
+    letter-spacing: 0.046rem;
 }
 
 
@@ -177,6 +193,29 @@
         height: 60px;
     }
 
+}
+
+@media screen and (max-width: 987px) {
+    .hairstyle-section {
+        position: static;
+    }
+
+    .hairstyle-image {
+        width: 100%;
+    }
+
+    .hairstyle-block {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hairstyle-text {
+        padding: 0.5rem;
+        text-align: center;
+    }
 }
 
 @media screen and  (max-width: 842px) {

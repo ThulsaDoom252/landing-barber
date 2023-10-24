@@ -1,13 +1,17 @@
 import './App.css';
 import 'reset-css';
 import Header from './components/Header';
-import Content from './components/Content';
+import HairStyleSection from './components/HairStyleSection';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
     return (
         <div className={'wrapper'}>
             <Header/>
-            <Content/>
+            <main>
+                <HairStyleSection/>
+            </main>
         </div>
     );
 }
