@@ -32,25 +32,27 @@ const Services = () => {
     ]
 
     return (
-        <Container fluid>
-            <div className='services-title'>
-                <h1>Services We</h1>
-                <h1 className='colored-word'>Provide</h1>
-            </div>
-            <div className='services-block'>
-                <Row>
-                    {serviceItems.map((item, index) => (
-                        <Col className='services-col'>
-                            <div key={index} className='services-img-item'>
-                                <img src={item.src} alt={item.alt}/>
-                            </div>
-                            <h3 className='services-col-title'>{item.title}</h3>
-                            <div className='services-col-text'>{item.text}</div>
-                        </Col>
-                    ))}
-                </Row>
-            </div>
-        </Container>
+        <section>
+            <Container fluid>
+                <div className='services-title'>
+                    <h1>Services We</h1>
+                    <h1 className='colored-word'>Provide</h1>
+                </div>
+                <div className='services-block'>
+                    <Row>
+                        {serviceItems.map((item, index) => (
+                            <Col className='services-col'>
+                                <div key={index} className='services-img-item'>
+                                    <img src={item.src} alt={item.alt}/>
+                                </div>
+                                <h3 className='services-col-title'>{item.title}</h3>
+                                <div className='services-col-text'>{item.text}</div>
+                            </Col>
+                        ))}
+                    </Row>
+                </div>
+            </Container>
+        </section>
     );
 };
 

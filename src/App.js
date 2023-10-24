@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import HistorySection from './components/Content/HistorySection';
 import {Container} from 'react-bootstrap';
 import Services from './components/Content/Services';
+import Gallery from './components/Content/Gallery';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
                 <HairStyleSection/>
                 <HistorySection/>
                 <Services/>
+                <Gallery/>
             </main>
         </Container>
 
