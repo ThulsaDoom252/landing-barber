@@ -342,9 +342,9 @@ $text-color: #153461;
 
 
 //*********Gallery
-
 .gallery-section {
   margin-top: 17rem;
+  text-align: center;
 }
 
 .gallery-title {
@@ -362,6 +362,11 @@ $text-color: #153461;
 
 .gallery-block img {
   width: 100%;
+}
+
+.gallery-button {
+  margin: 0 auto;
+  @extend %button
 }
 
 @media screen and (max-width: 842px) {

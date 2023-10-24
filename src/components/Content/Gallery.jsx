@@ -24,6 +24,7 @@ const Gallery = () => {
                         <Col className='px-1'><img src={hm6} alt='picture-6'/></Col>
                     </Row>
                 </div>
+                <button className='gallery-button'>View all</button>
             </Container>
         </section>
     );
