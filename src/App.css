@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@600&display=swap');
 
-
 .button {
     color: white;
     width: 188px;
@@ -19,6 +18,8 @@
 .wrapper {
     max-width: 1920px;
     box-sizing: border-box;
+    font-family: Catamaran;
+
 }
 
 
@@ -27,7 +28,6 @@
     height: 100px;
     width: 100%;
     padding-left: 170px;
-    font-family: Catamaran;
     color: black;
     display: flex;
     justify-content: space-between;
@@ -132,6 +132,24 @@
     width: 188px;
     height: 76px;
 }
+
+
+/*////////Main*/
+.hairstyle-section {
+    width: 100%;
+    display: flex;
+    margin-top: 165px;
+    padding-left: 188px;
+}
+
+.hairstyle-block {
+    width: 30%;
+}
+
+.hairstyle-image {
+    width: 60%;
+}
+
 
 /*///BREAKPOINTS*/
 @media screen and (max-width: 1449px) {

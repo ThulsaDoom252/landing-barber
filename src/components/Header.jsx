@@ -1,8 +1,8 @@
 import React from 'react';
-import logo from "../assets/scissors 1.png"
-import profileIcon from "../assets/Profile 1.png"
-import notificationIcon from "../assets/Notification 1.png"
-import {List} from 'react-bootstrap-icons';
+import logo from "../assets/Logo.png"
+import profileIcon from "../assets/Profile.png"
+import notificationIcon from "../assets/Notification.png"
+import {HiViewList} from 'react-icons/hi';
 
 const Header = () => {
     return (
@@ -28,7 +28,7 @@ const Header = () => {
                 </div>
                 <button className='appointment-button button'>Appointment</button>
             </div>
-            <List className='burger-menu-icon'/>
+            <HiViewList className='burger-menu-icon'/>
         </header>
     );
 };
@@ -37,9 +37,9 @@ export default Header;
 
 
 // import React from 'react';
-// import scissorIcon1 from "../assets/scissors 1.png"
-// import profileIcon from "../assets/Profile 1.png"
-// import notificationIcon from "../assets/Notification 1.png"
+// import scissorIcon1 from "../assets/Logo.png"
+// import profileIcon from "../assets/Profile.png"
+// import notificationIcon from "../assets/Notification.png"
 //
 // const Header = () => {
 //     return (

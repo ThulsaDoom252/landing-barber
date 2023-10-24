@@ -1,11 +1,13 @@
 import './App.css';
 import 'reset-css';
 import Header from './components/Header';
+import Content from './components/Content';
 
 function App() {
     return (
         <div className={'wrapper'}>
             <Header/>
+            <Content/>
         </div>
     );
 }
