@@ -7,6 +7,7 @@ import HistorySection from './components/Content/HistorySection';
 import {Container} from 'react-bootstrap';
 import Services from './components/Content/Services';
 import Gallery from './components/Content/Gallery';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
                 <Services/>
                 <Gallery/>
             </main>
+            <Footer/>
         </Container>
 
     );
