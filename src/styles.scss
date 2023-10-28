@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@600&display=swap');
 
+
+//Variables
 $title-main: #FBB400;
 $text-color: #153461;
+$primary: #99BAED;
+$primary-hover: #497fff;
 
+
+/// Templates
 %section-text {
   font-size: 1.563rem;
   width: 90%;
@@ -14,20 +20,28 @@ $text-color: #153461;
   word-break: break-all;
 }
 
+
+@mixin icon-hover($width: 2.44rem, $background: rgba(183, 182, 182, 0.4)) {
+  &:hover {
+    background: rgba(183, 182, 182, 0.4);
+    width: $width;
+    cursor: pointer;
+  }
+}
+
 %button {
   color: white;
   width: 188px;
   height: 75px;
   border-radius: 20px;
-  background: #99BAED;
+  background: $primary;
   cursor: pointer;
   transition: background 0.3s ease; /* Добавляем плавную анимацию для изменения фона */
 
   &:hover {
-    background: #497fff; /* Новый фон при наведении */
+    background: $primary-hover; /* Новый фон при наведении */
   }
 }
-
 
 .colored-word {
   color: $title-main;
@@ -39,7 +53,7 @@ $text-color: #153461;
 
 /*///!**********************HEADER*/
 .header {
-  height: 100px;
+  height: 6.25rem;
   width: 100%;
   padding-left: 170px;
   color: black;
@@ -59,25 +73,25 @@ $text-color: #153461;
 }
 
 .logo {
-  width: 74.22px;
-  height: 74.22px;
+  width: 4.64rem;
+  aspect-ratio: auto;
 }
 
 .logo-text {
   position: relative;
-  right: 20px;
-  color: #99BAED;
-  font-size: 40px;
+  right: 1.25rem;
+  color: $primary;
+  font-size: 2.5rem;
 }
 
 /*Navbar*/
 .navbar {
-  width: 448px;
-  margin-left: 110px;
+  width: 28rem;
+  margin-left: 6.9rem;
   position: relative;
   display: flex;
   justify-content: space-between;
-  font-size: 25px;
+  font-size: 1.6rem;
   font-weight: 500;
   align-items: end;
 }
@@ -90,61 +104,57 @@ $text-color: #153461;
 }
 
 .nav-item:hover {
-  background: #99BAED;
+  background: $primary;
   color: white;
   cursor: pointer;
 }
 
 .appointment-block {
   position: relative;
-  top: 35px;
-  right: 230px;
+  top: 2.2rem;
+  right: 14.4rem;
   justify-content: space-between;
-  width: 416px;
+  width: 26rem;
   display: flex;
   align-items: center;
 }
 
 .profile-icon {
   border-radius: 20px;
-  width: 32px;
-  height: 32px;
-  flex-shrink: 0;
+  width: 2rem;
+  aspect-ratio: 1/1;
   cursor: pointer;
   transition: all 0.5s ease;
+  @include icon-hover();
 }
 
 .notification-icon {
-  width: 29.75px;
+  width: 1.86rem;
   border-radius: 20px;
-  height: 27.988px;
+  aspect-ratio: 1/1;
   cursor: pointer;
   transition: all 0.5s ease;
+  @include icon-hover();
 }
 
 .profile-icon img, .notification-icon img {
   width: 100%;
-  height: 100%;
+  aspect-ratio: 1/1;
 }
 
-.notification-icon:hover, .profile-icon:hover {
-  background: rgba(183, 182, 182, 0.4);
-  width: 39px;
-  height: 39px;
-}
 
 .burger-menu-icon {
   display: none;
   position: absolute;
-  right: 10px;
-  top: 10px;
+  right: 0.625rem;
+  top: 0.625rem;
   color: cyan;
   cursor: pointer;
 }
 
 .appointment-button {
-  width: 188px;
-  height: 76px;
+  width: 11.75rem;
+  height: 4.75rem;
   @extend %button;
 }
 
@@ -160,7 +170,7 @@ $text-color: #153461;
 .hairstyle-image {
   width: 78%;
   position: relative;
-  bottom: 100px;
+  bottom: 6.25rem;
 }
 
 .hairstyle-title {
@@ -174,8 +184,9 @@ $text-color: #153461;
 }
 
 .hairstyle-button {
-  @extend %button;
   margin-top: 6.06rem;
+  z-index: 20;
+  @extend %button;
 }
 
 /******************HISTORY */
@@ -188,8 +199,8 @@ $text-color: #153461;
 .history-title {
   font-weight: 700;
   font-size: 4.68rem;
-  line-height: 150.6%; /* 105.42px */
-  letter-spacing: 2.1px;
+  line-height: 150.6%;
+  letter-spacing: 0.13rem;
 }
 
 .history-text-1 {
@@ -245,7 +256,7 @@ $text-color: #153461;
   transition: all 0.5s;
 
   &:hover {
-    background: #99BAED;
+    background: $primary;
     color: white;
     cursor: pointer;
   }
@@ -277,6 +288,33 @@ $text-color: #153461;
   color: $text-color;
 }
 
+//*********Gallery
+.gallery-section {
+  text-align: center;
+}
+
+.gallery-title {
+  text-align: center;
+  font-size: 4.11rem;
+  margin-top: 17rem;
+  color: $text-color;
+  font-weight: 700;
+}
+
+.gallery-block {
+  margin: 6.9rem auto;
+  width: 85%;
+}
+
+.gallery-block img {
+  width: 100%;
+}
+
+.gallery-button {
+  margin: 0 auto;
+  @extend %button
+}
+
 //******Footer
 .footer {
   margin-top: 11.75rem;
@@ -301,7 +339,7 @@ $text-color: #153461;
 }
 
 .footer-logo-text {
-  color: #99BAED;
+  color: $primary;
   font-weight: 600;
   font-size: 3.75rem;
 }
@@ -319,52 +357,52 @@ $text-color: #153461;
 }
 
 .contact-item {
-  background: #99BAED;
+  background: $primary;
   margin: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 3.75rem;
   width: 4.18rem;
-  height: 4.18rem;
+  aspect-ratio: 1/1;
+  transition: all 0.5s ease;
+  cursor: pointer;
 }
-
 
 /*///BREAKPOINTS*/
 @media screen and (max-width: 1449px) {
   .header {
-    padding-left: 20px;
+    padding-left: 1.25rem;
   }
 
   .appointment-block {
-    right: 40px;
+    right: 2.5rem;
     max-width: 30%;
   }
 
   .navbar {
-    margin-left: 40px;
+    margin-left: 2.5rem;
   }
 }
 
 @media screen and (max-width: 1031px) {
   .navbar {
-    width: 330px;
+    width: 20.63rem;
   }
 
   .appointment-button {
-    width: 150px;
-    height: 60px;
+    width: 9.4rem;
+    height: 3.75rem;
   }
-
 }
 
 @media screen and (max-width: 987px) {
-  .hairstyle-section, .history-section, .history-image {
-    position: static;
+  .history-title, .services-title, .gallery-title {
+    margin-top: 2rem;
   }
 
-  .history-section {
-    margin-top: 6rem;
+  .hairstyle-section, .history-section, .history-image {
+    position: static;
   }
 
   .hairstyle-image, {
@@ -400,43 +438,14 @@ $text-color: #153461;
   }
 }
 
-
-//*********Gallery
-.gallery-section {
-  margin-top: 17rem;
-  text-align: center;
-}
-
-.gallery-title {
-  text-align: center;
-  font-size: 4.11rem;
-  margin: 0 auto;
-  color: $text-color;
-  font-weight: 700;
-}
-
-.gallery-block {
-  margin: 6.9rem auto;
-  width: 85%;
-}
-
-.gallery-block img {
-  width: 100%;
-}
-
-.gallery-button {
-  margin: 0 auto;
-  @extend %button
-}
-
 @media screen and (max-width: 842px) {
   .navbar {
     margin: 0;
-    width: 320px;
+    width: 20rem;
   }
 
   .appointment-block {
-    right: 20px;
+    right: 1.25rem;
   }
 
   .logo-text {
@@ -446,15 +455,24 @@ $text-color: #153461;
 }
 
 @media screen and (max-width: 733px) {
+  .hairstyle-title, .history-title, .services-title h1, .gallery-title {
+    font-size: 3rem;
+  }
+
   .header {
     align-items: center;
     flex-direction: column;
-    padding: 20px 0 0 0;
+    padding: 1.25rem 0 0 0;
   }
 
   .logo-nav-block {
     align-items: center;
     flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar {
+    width: 100%;
   }
 
   .burger-menu-icon {
@@ -463,8 +481,9 @@ $text-color: #153461;
   }
 
   .appointment-block {
-    width: 188px;
-    margin-top: 20px;
+    display: block;
+    min-width: 11.75rem;
+    margin: 1.25rem auto;
     position: static;
   }
 
