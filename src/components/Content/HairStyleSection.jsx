@@ -13,9 +13,10 @@ const HairStyleSection = () => {
                                 Personality
                                 Inside You</h2>
                             <div className='hairstyle-text'>
-                                It is a long established fact that a reader will be distracted by the readable
-                                content of a
-                                page when looking at.
+                                Welcome to a World of Hairstyles That Reflect Your Unique Personality. Your journey to
+                                self-expression begins here. Discover a wide range of stunning hairstyles that will not
+                                only enhance your appearance but also mirror your inner character. Start exploring now
+                                and let your hair tell your story. Get ready to embrace a new, stylish you!
                             </div>
                             <button className='hairstyle-button'>Get Started</button>
                         </div>

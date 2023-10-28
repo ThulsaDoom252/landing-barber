@@ -14,13 +14,15 @@ const HistorySection = ({isMd}) => {
                     <Col lg={4} md={12} className={isMd && 'order-first'}>
                         <div className='history-block'>
                             <h1 className='history-title'>Our <span className='colored-word'>History</span></h1>
-                            <div className='history-text-1'>It is a long established fact that a reader will be
-                                distracted by the readable content
-                                of a page when looking at.
+                            <div className='history-text-1'>Step into Our Hair Journey. A Tale of Beauty and Expertise.
+
+                                Our hair salon is more than just a place for a haircut – it's a story of passion and
+                                skill.
                             </div>
                             <div className='history-text-2'>
-                                It is a long established fact that a reader will be distracted by the readable content
-                                of a page when looking at.
+                                With a legacy of crafting stunning looks for our clients, we've honed our art
+                                over the years. Click below to delve into the rich history of our salon and uncover the
+                                secrets behind our artistry. Discover the magic of our journey. Find out more
                             </div>
                             <button className='history-button'>Learn more</button>
                         </div>

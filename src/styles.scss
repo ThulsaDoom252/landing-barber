@@ -17,7 +17,7 @@ $primary-hover: #497fff;
   letter-spacing: 0.05rem;
   color: $text-color;
   opacity: 0.65;
-  word-break: break-all;
+  word-break: break-word !important;
 }
 
 @mixin icon-hover($width: 2.44rem, $background: rgba(183, 182, 182, 0.4)) {
@@ -48,6 +48,7 @@ $primary-hover: #497fff;
 
 .wrapper {
   font-family: Catamaran;
+  position: relative;
 }
 
 /*///!**********************HEADER*/
@@ -330,6 +331,7 @@ $primary-hover: #497fff;
 
 .footer-logo-block {
   position: relative;
+  justify-content: center;
   right: 1rem;
   display: flex;
   align-items: end;
@@ -351,13 +353,13 @@ $primary-hover: #497fff;
   max-width: 32.87rem;
   margin-top: 2.29rem;
   text-align: center;
-  white-space: normal;
   @extend %section-text;
 }
 
 .footer-contacts {
   margin-top: 2.93rem;
   display: flex;
+  justify-content: center;
 }
 
 .contact-item {
@@ -371,6 +373,11 @@ $primary-hover: #497fff;
   aspect-ratio: 1/1;
   transition: all 0.5s ease;
   cursor: pointer;
+}
+
+.footer-line {
+  color: $primary;
+  height: 0.1rem;
 }
 
 /*///BREAKPOINTS*/
