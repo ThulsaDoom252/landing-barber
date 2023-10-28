@@ -1,8 +1,8 @@
 import React from 'react';
 import {Col, Container, Row} from 'react-bootstrap';
-import hairCut from "../../assets/Services/hairCut.png"
-import beardCut from "../../assets/Services/bearCut.png"
-import facialPack from "../../assets/Services/facialPack.png"
+import hairCut from "./hairCut.png"
+import beardCut from "./bearCut.png"
+import facialPack from "./facialPack.png"
 
 const Services = ({isMd}) => {
     const serviceItems = [

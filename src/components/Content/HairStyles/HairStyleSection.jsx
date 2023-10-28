@@ -1,5 +1,5 @@
 import React from 'react';
-import Hairstyles from "../../assets/Hairstyles.png"
+import Hairstyles from "./Hairstyles.png"
 import {Col, Container, Row} from 'react-bootstrap';
 
 const HairStyleSection = () => {

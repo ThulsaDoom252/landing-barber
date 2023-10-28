@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import {Col, Container, Row} from 'react-bootstrap';
-import HistoryImg from "../../assets/History.png"
-import historyLeftVector from "../../assets/vectors/history-v-left.png"
-import historyRightVector from "../../assets/vectors/history-v-right.png"
+import HistoryImg from "./History.png"
+import historyLeftVector from "../../../assets/vectors/history-v-left.png"
+import historyRightVector from "../../../assets/vectors/history-v-right.png"
 
 const HistorySection = ({isMd}) => {
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import {Container} from 'react-bootstrap';
 import bottomLeftVector from "../assets/vectors/bottom-v-left.png"
-import bottomRightVector from "../assets/vectors/bottm-v-right.png"
+import bottomRightVector from "../assets/vectors/bottom-v-right.png"
 
 const Wrapper = ({children}) => {
     return (

@@ -1,15 +1,15 @@
 import React from 'react';
 import {Col, Container, Row} from 'react-bootstrap';
-import hm1 from "../../assets/Gallery/hm1.png"
-import hm2 from "../../assets/Gallery/hm2.png"
-import hm3 from "../../assets/Gallery/hm3.png"
-import hm4 from "../../assets/Gallery/hm4.png"
-import hm5 from "../../assets/Gallery/hm5.png"
-import hm6 from "../../assets/Gallery/hm6.png"
-import middleRightTopVector from "../../assets/vectors/middle-v-right-top.png"
-import middleRightBottomVector from "../../assets/vectors/middle-v-right-bottom.png"
-import middleLeftTopVector from "../../assets/vectors/middle-v-left-top.png"
-import middleLeftBottomVector from "../../assets/vectors/middle-v-left-bottom.png"
+import hm1 from "./hm1.png"
+import hm2 from "./hm2.png"
+import hm3 from "./hm3.png"
+import hm4 from "./hm4.png"
+import hm5 from "./hm5.png"
+import hm6 from "./hm6.png"
+import middleRightTopVector from "../../../assets/vectors/middle-v-right-top.png"
+import middleRightBottomVector from "../../../assets/vectors/middle-v-right-bottom.png"
+import middleLeftTopVector from "../../../assets/vectors/middle-v-left-top.png"
+import middleLeftBottomVector from "../../../assets/vectors/middle-v-left-bottom.png"
 
 const Gallery = ({isMd}) => {
 

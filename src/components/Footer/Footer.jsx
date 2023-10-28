@@ -1,8 +1,8 @@
 import React from 'react';
-import logo from "../assets/Logo.png"
-import facebookIcon from "../assets/Contacts/facebook.png"
-import twitterIcon from "../assets/Contacts/twittor.png"
-import googleIcon from "../assets/Contacts/google.png"
+import logo from "../../assets/Logo.png"
+import facebookIcon from "./facebook.png"
+import twitterIcon from "./twitter.png"
+import googleIcon from "./google.png"
 import {Container} from 'react-bootstrap';
 
 const Footer = () => {
