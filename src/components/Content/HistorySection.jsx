@@ -1,12 +1,16 @@
 import React, {useEffect, useState} from 'react';
 import {Col, Container, Row} from 'react-bootstrap';
 import HistoryImg from "../../assets/History.png"
+import historyLeftVector from "../../assets/vectors/history-v-left.png"
+import historyRightVector from "../../assets/vectors/history-v-right.png"
 
 const HistorySection = ({isMd}) => {
 
     return (
         <section>
             <Container fluid className='history-section'>
+                <img className='history-left-vector' src={historyLeftVector} alt="vector"/>
+                <img className='history-right-vector' src={historyRightVector} alt="vector"/>
                 <Row>
                     <Col lg={7} md={12}>
                         <img className='history-image' src={HistoryImg} alt='history-image'/>

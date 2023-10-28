@@ -20,14 +20,6 @@ $primary-hover: #497fff;
   word-break: break-word !important;
 }
 
-@mixin icon-hover($width: 2.44rem, $background: rgba(183, 182, 182, 0.4)) {
-  &:hover {
-    background: rgba(183, 182, 182, 0.4);
-    width: $width;
-    cursor: pointer;
-  }
-}
-
 %button {
   color: white;
   width: 11.75rem;
@@ -42,6 +34,26 @@ $primary-hover: #497fff;
   }
 }
 
+//Mixins
+@mixin icon-hover($width: 2.44rem, $background: rgba(183, 182, 182, 0.4)) {
+  &:hover {
+    background: rgba(183, 182, 182, 0.4);
+    width: $width;
+    cursor: pointer;
+  }
+}
+
+@mixin vector-mixin($left: auto, $right: auto, $top:auto, $bottom:auto) {
+  position: absolute;
+  left: $left;
+  right: $right;
+  top: $top;
+  bottom: $bottom;
+  z-index: 2;
+
+}
+
+
 .colored-word {
   color: $title-main;
 }
@@ -49,6 +61,7 @@ $primary-hover: #497fff;
 .wrapper {
   font-family: Catamaran;
   position: relative;
+  overflow-x: hidden;
 }
 
 /*///!**********************HEADER*/
@@ -189,6 +202,7 @@ $primary-hover: #497fff;
   @extend %button;
 }
 
+
 /******************HISTORY */
 .history-section {
   margin-top: 21.06rem;
@@ -294,13 +308,14 @@ $primary-hover: #497fff;
 
 //*********Gallery
 .gallery-section {
+  margin-top: 17rem;
+  position: relative;
   text-align: center;
 }
 
 .gallery-title {
   text-align: center;
   font-size: 4.11rem;
-  margin-top: 17rem;
   color: $text-color;
   font-weight: 700;
 }
@@ -380,6 +395,41 @@ $primary-hover: #497fff;
   height: 0.1rem;
 }
 
+/////////VECTORS
+.history-left-vector {
+  @include vector-mixin($top: -14rem, $left: -6rem);
+}
+
+.history-right-vector {
+  @include vector-mixin($right: 4.4rem, $top: -14rem)
+
+}
+
+.middle-right-top-vector {
+  @include vector-mixin($right: 0, $top: -45rem)
+
+}
+
+.middle-right-bottom-vector {
+  @include vector-mixin($right: 0, $top: -10rem)
+}
+
+.middle-left-top-vector {
+  @include vector-mixin($left: 0, $top: -45rem);
+}
+
+.middle-left-bottom-vector {
+  @include vector-mixin($left: 0, $top: -10rem)
+}
+
+.bottom-vector-left {
+  @include vector-mixin($left: 0, $bottom: 0)
+}
+
+.bottom-vector-right {
+  @include vector-mixin($right: 0, $bottom: 0)
+}
+
 /*///BREAKPOINTS*/
 @media screen and (max-width: 1573px) {
   .header {
@@ -408,7 +458,11 @@ $primary-hover: #497fff;
 }
 
 @media screen and (max-width: 987px) {
-  .hairstyle-title, .history-title, .services-title h1, .gallery-title {
+  .gallery-section {
+    margin-top: 1rem;
+  }
+
+  .hairstyle-title, .history-title, .services-title h1 {
     margin: 0 auto;
     font-size: 3rem;
     max-width: 30rem;
@@ -428,8 +482,16 @@ $primary-hover: #497fff;
     margin: 8rem 0 2rem 0;
   }
 
-  .hairstyle-section, .history-section, .history-image {
+  .hairstyle-section, .history-image {
     position: static;
+  }
+
+  .history-section {
+    left: 0;
+  }
+
+  .history-right-vector {
+    right: 0;
   }
 
   .hairstyle-image, {
@@ -474,6 +536,10 @@ $primary-hover: #497fff;
 
   .footer {
     margin-top: 7rem;
+  }
+
+  .middle-left-bottom-vector, .middle-left-top-vector, .middle-right-bottom-vector, .middle-right-top-vector {
+    display: none;
   }
 }
 

@@ -9,6 +9,7 @@ import Services from './components/Content/Services';
 import Gallery from './components/Content/Gallery';
 import Footer from './components/Footer';
 import {useEffect, useState} from 'react';
+import Wrapper from './components/Wrapper';
 
 
 function App() {
@@ -39,7 +40,7 @@ function App() {
     }, [])
 
     return (
-        <Container fluid className='wrapper'>
+        <Wrapper>
             <Header/>
             <main>
                 <HairStyleSection/>
@@ -48,7 +49,8 @@ function App() {
                 <Gallery isMd={isMd}/>
             </main>
             <Footer/>
-        </Container>
+        </Wrapper>
+
 
     );
 }

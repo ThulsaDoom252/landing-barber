@@ -6,6 +6,10 @@ import hm3 from "../../assets/Gallery/hm3.png"
 import hm4 from "../../assets/Gallery/hm4.png"
 import hm5 from "../../assets/Gallery/hm5.png"
 import hm6 from "../../assets/Gallery/hm6.png"
+import middleRightTopVector from "../../assets/vectors/middle-v-right-top.png"
+import middleRightBottomVector from "../../assets/vectors/middle-v-right-bottom.png"
+import middleLeftTopVector from "../../assets/vectors/middle-v-left-top.png"
+import middleLeftBottomVector from "../../assets/vectors/middle-v-left-bottom.png"
 
 const Gallery = ({isMd}) => {
 
@@ -24,6 +28,10 @@ const Gallery = ({isMd}) => {
     return (
         <section>
             <Container fluid className='gallery-section'>
+                <img className='middle-right-top-vector' src={middleRightTopVector} alt='vector'/>
+                <img className='middle-right-bottom-vector' src={middleRightBottomVector} alt='vector'/>
+                <img className='middle-left-top-vector' src={middleLeftTopVector} alt='vector'/>
+                <img className='middle-left-bottom-vector' src={middleLeftBottomVector} alt='vector'/>
                 <h1 className='gallery-title'>Our <span className='colored-word'>Gallery</span></h1>
                 <div className='gallery-block'>
                     <Row className='py-1'>
