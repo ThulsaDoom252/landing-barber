@@ -2,25 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {Col, Container, Row} from 'react-bootstrap';
 import HistoryImg from "../../assets/History.png"
 
-const HistorySection = () => {
-    const mediumScreenWidth = 987
-    const [isMd, setIsMd] = useState(false)
-
-
-    useEffect(() => {
-        const handleResize = () => {
-            const mediumScreenWidth = 987
-            window.innerWidth < mediumScreenWidth ? setIsMd(true) : setIsMd(false)
-        }
-
-        window.addEventListener('resize', handleResize)
-
-        return () => {
-            window.removeEventListener('resize', handleResize)
-        }
-
-    }, []);
-
+const HistorySection = ({isMd}) => {
 
     return (
         <section>

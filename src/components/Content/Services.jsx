@@ -4,7 +4,7 @@ import hairCut from "../../assets/Services/hairCut.png"
 import beardCut from "../../assets/Services/bearCut.png"
 import facialPack from "../../assets/Services/facialPack.png"
 
-const Services = () => {
+const Services = ({isMd}) => {
     const serviceItems = [
         {
             src: hairCut,
@@ -41,7 +41,7 @@ const Services = () => {
                 <div className='services-block'>
                     <Row>
                         {serviceItems.map((item, index) => (
-                            <Col className='services-col'>
+                            <Col className={`services-col ${!isMd && 'services-gap'}`} xs={isMd && 12}>
                                 <div key={index} className='services-img-item'>
                                     <img src={item.src} alt={item.alt}/>
                                 </div>

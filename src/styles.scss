@@ -20,7 +20,6 @@ $primary-hover: #497fff;
   word-break: break-all;
 }
 
-
 @mixin icon-hover($width: 2.44rem, $background: rgba(183, 182, 182, 0.4)) {
   &:hover {
     background: rgba(183, 182, 182, 0.4);
@@ -31,8 +30,8 @@ $primary-hover: #497fff;
 
 %button {
   color: white;
-  width: 188px;
-  height: 75px;
+  width: 11.75rem;
+  height: 4.68rem;
   border-radius: 20px;
   background: $primary;
   cursor: pointer;
@@ -242,8 +241,8 @@ $primary-hover: #497fff;
   margin: 0 auto;
 }
 
+
 .services-col {
-  margin: 3.06rem;
   background: #FAFBFF;
   padding: 3.123rem 2.56rem 4.5rem 2.56rem;
   display: flex;
@@ -261,6 +260,10 @@ $primary-hover: #497fff;
     cursor: pointer;
   }
 
+}
+
+.services-gap + .services-gap {
+  margin-left: 3rem;
 }
 
 .services-img-item {
@@ -345,9 +348,10 @@ $primary-hover: #497fff;
 }
 
 .footer-text {
-  width: 32.87rem;
+  max-width: 32.87rem;
   margin-top: 2.29rem;
   text-align: center;
+  white-space: normal;
   @extend %section-text;
 }
 
@@ -370,7 +374,7 @@ $primary-hover: #497fff;
 }
 
 /*///BREAKPOINTS*/
-@media screen and (max-width: 1449px) {
+@media screen and (max-width: 1573px) {
   .header {
     padding-left: 1.25rem;
   }
@@ -397,8 +401,24 @@ $primary-hover: #497fff;
 }
 
 @media screen and (max-width: 987px) {
-  .history-title, .services-title, .gallery-title {
-    margin-top: 2rem;
+  .hairstyle-title, .history-title, .services-title h1, .gallery-title {
+    margin: 0 auto;
+    font-size: 3rem;
+    max-width: 30rem;
+  }
+
+  .history-section {
+    margin-top: 1rem;
+  }
+
+  .history-title, .services-title {
+    margin-top: 1rem;
+  }
+
+  .hairstyle-button {
+    position: relative;
+    bottom: 6rem;
+    margin: 8rem 0 2rem 0;
   }
 
   .hairstyle-section, .history-section, .history-image {
@@ -429,23 +449,31 @@ $primary-hover: #497fff;
 
   .services-block {
     width: 100%;
-    margin: 0;
+    margin: -5rem auto !important;
   }
 
   .services-col {
     margin: 0 0 5rem 0;
     padding: 0 0 1rem 0;
   }
+
+  .gallery-title {
+    margin-top: 5rem;
+  }
+
+  .gallery-block {
+    margin-top: 3rem;
+  }
+
+  .footer {
+    margin-top: 7rem;
+  }
 }
 
-@media screen and (max-width: 842px) {
+@media screen and (max-width: 879px) {
   .navbar {
     margin: 0;
     width: 20rem;
-  }
-
-  .appointment-block {
-    right: 1.25rem;
   }
 
   .logo-text {
@@ -481,7 +509,8 @@ $primary-hover: #497fff;
   }
 
   .appointment-block {
-    display: block;
+    display: flex;
+    justify-content: center;
     min-width: 11.75rem;
     margin: 1.25rem auto;
     position: static;
@@ -489,6 +518,7 @@ $primary-hover: #497fff;
 
   .notification-icon, .profile-icon {
     display: none;
+    position: absolute;
   }
 }
 

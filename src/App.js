@@ -8,17 +8,44 @@ import {Container} from 'react-bootstrap';
 import Services from './components/Content/Services';
 import Gallery from './components/Content/Gallery';
 import Footer from './components/Footer';
+import {useEffect, useState} from 'react';
 
 
 function App() {
+
+    const [isMd, setIsMd] = useState(false)
+    const mediumScreenWidth = 987
+
+
+    useEffect(() => {
+        const handleResize = () => {
+            window.innerWidth < mediumScreenWidth ? setIsMd(true) : setIsMd(false)
+        }
+
+        window.addEventListener('resize', handleResize)
+        window.addEventListener('orientationchange', handleResize)
+
+        return () => {
+            window.removeEventListener('resize', handleResize)
+            window.removeEventListener('orientationchange', handleResize)
+        }
+
+    }, []);
+
+    useEffect(() => {
+        if (window.innerWidth <= mediumScreenWidth) {
+            setIsMd(true)
+        }
+    }, [])
+
     return (
         <Container fluid className='wrapper'>
             <Header/>
             <main>
                 <HairStyleSection/>
-                <HistorySection/>
-                <Services/>
-                <Gallery/>
+                <HistorySection isMd={isMd}/>
+                <Services isMd={isMd}/>
+                <Gallery isMd={isMd}/>
             </main>
             <Footer/>
         </Container>
